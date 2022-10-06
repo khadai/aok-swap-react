@@ -1,14 +1,13 @@
 import { createGlobalStyle, DefaultTheme } from 'styled-components';
 import { Theme } from '@mui/material';
 
-interface CompinedTheme extends DefaultTheme, Theme {}
+interface CombinedTheme extends DefaultTheme, Theme {}
 
 interface GlobalStyleProps {
-    theme: CompinedTheme;
+    theme: CombinedTheme;
 }
 
 const GlobalStyle = createGlobalStyle<GlobalStyleProps>`
-
   ${({ theme }) => theme.breakpoints.down('md')} {
     html {
       font-size: 14px;
@@ -32,7 +31,7 @@ const GlobalStyle = createGlobalStyle<GlobalStyleProps>`
     opacity: 1;
     transition: opacity 250ms ease-in;
   }
-  
+
   .fade-exit {
     opacity: 1;
     z-index: 1;
@@ -42,11 +41,10 @@ const GlobalStyle = createGlobalStyle<GlobalStyleProps>`
     opacity: 0;
     z-index: 1;
   }
-  
+
   .box {
     width: 100px;
   }
-
 `;
 
 export default GlobalStyle;

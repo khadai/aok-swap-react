@@ -1,5 +1,4 @@
-import Home from "./home/Home";
+import Home from './home/Home';
+import Login from './login/Login';
 
-export {
-    Home
-};
+export { Home, Login };
